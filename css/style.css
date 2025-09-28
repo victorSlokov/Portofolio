@@ -1,0 +1,438 @@
+:root {
+  --mainColor: #ffffff;
+  --secondaryColor: #000000;
+  --acsenColor: #1a6aff;
+  --addColor : #f1f1f1 ;
+  --extrabold: 800;
+  
+}
+
+/* Aturan dasar navbar */
+.navbar {
+  position: fixed; /* Menjadikan navbar tetap di layar */
+  top: 0;          /* Posisikan di bagian paling atas */
+  width: 100%;     /* Pastikan lebarnya penuh */
+  z-index: 1030;   /* Nilai z-index bawaan Bootstrap untuk navbar */
+}
+
+/* Tambahkan padding-top pada body agar konten tidak tertutup navbar */
+body {
+
+  min-height: 600px;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  padding-top: 56px; /* Nilai ini menyesuaikan tinggi default navbar Bootstrap */
+}
+
+
+
+/*Menu awal.....................................................................*/
+.container-flex {
+  display: flex;
+  flex-direction: column; /* Tumpukan vertikal untuk mobile */
+  align-items: center; /* Pusatkan konten horizontal */
+  padding: 20px;
+  background-color: var(--addColor);
+}
+ .content-text h2 {
+  color: var(--acsenColor);
+  font-weight: var(--extrabold);
+ }
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+.wadah-relative {
+ padding: 0;
+ top: 0;
+
+    transform: translateX(100px)
+}
+
+/*.....................................................................*/
+
+/* Media query untuk desktop */
+@media (min-width: 768px) {
+  .container-flex {
+    flex-direction: row; /* Ubah ke baris horizontal */
+    justify-content: space-between; /* Beri jarak antara gambar dan teks */
+    background-color: var(--addColor);
+  }
+  .content-text, .content-image {
+    flex: 1; /* Biar masing-masing mengambil porsi yang sama */
+  }
+  .content-text{
+    transform: translate(50px, 10px); 
+    
+  }
+  .content-text h2{
+    color: var(--acsenColor);
+    font-weight: var(--extrabold);
+  }
+  .content-image{
+    mix-blend-mode: multiply;
+    margin-left: auto;
+    width: 100%; height: 100%; object-fit: cover;
+    object-fit: cover; /* Jika gambar harus mengisi dan terpotong */
+
+}
+.wadah-relative { 
+margin-top: -90px;
+margin-left: -99px;
+}
+
+.wadah-kanan {
+transform: translateX(50px)
+}
+
+.desain_font_portofolio {
+    /* Mengatur ukuran font menjadi 3 kali ukuran font dasar browser (biasanya 3 x 16px) */
+    font-size: 5rem; 
+    
+    /* Jika 3rem masih kurang besar, coba nilai yang lebih tinggi */
+    /* font-size: 5rem; */
+}
+  }
+
+    
+
+
+
+   
+
+
+/*akhir menu awal.................................................*/
+
+
+
+.section-2 {
+  padding: 50px 0;
+}
+
+.container-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-experience {
+  display: flex;
+  flex: 2; /* Mengambil ruang lebih besar dari yang lain */
+  background-color: var(--mainColor);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-right: 20px;
+}
+
+.card-contact, .card-software {
+  flex: 1; /* Mengambil porsi ruang yang sama */
+  background-color: var(--mainColor);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--secondaryColor);
+}
+
+.card-contact {
+  margin-right: 20px;
+}
+
+.column {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.column h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.column p {
+  margin-bottom: 20px;
+}
+
+.column span {
+  display: block;
+  font-size: 0.9em;
+  color: var(--addColor);
+}
+
+.card-contact img, .card-software img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.software-icons img {
+  margin-right: 15px;
+}
+
+.p-4 h3 {
+    color: var(--acsenColor);
+  }
+
+  /*icon academik.......................*/
+  .icon_academik{
+    width: 50px;
+     margin: 3px; 
+  }
+  
+  /*icon hobby.......................*/
+  
+  .icon{
+     margin: 5px; 
+  }
+img[alt="ibis"] {
+  width: 100px;
+}
+
+img[alt="adobexd"] {
+  width: 50px;
+}
+
+
+img[alt="Kinemaster"] {
+  width: 50px;
+}
+
+img[alt="HTML"] {
+  width: 90px;
+  mix-blend-mode: multiply;
+  
+}
+
+img[alt="CSS"] {
+  width: 50px;
+}
+
+img[alt="PHP"] {
+  width: 50px;
+}
+
+img[alt="XAMPP"] {
+  width: 50px;
+}
+
+img[alt="netlify"] {
+  width: 90px;
+}
+/*.....................................*/
+
+
+/*academik experience.......................*/
+
+.project-card {
+   height: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Efek zoom in */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek overlay untuk judul */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover .overlay {
+  opacity: 1; /* Overlay muncul saat hover */
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.col-lg-2 {
+  width: 80% ;
+}
+
+.row {
+  display: flex;
+  align-items: stretch; /* Penting: agar semua item merenggang hingga tinggi yang sama */
+}
+/*...............................................*/
+
+
+
+
+
+
+
+
+
+
+
+/*scroll awal saat memilih pop up*/
+/* Pastikan ini ada di CSS kustom Anda */
+.project-card {
+    display: block; /* Agar link bertindak sebagai blok */
+    position: relative;
+    /* Tambahkan border atau bayangan jika perlu */
+    
+}
+.project-section {
+    /* Mengubah latar belakang area ini menjadi hitam */
+    background-image: linear-gradient(to right, #161614, #92928f); 
+    
+    /* Tambahkan sedikit padding agar kotak tidak terlalu menempel pada tepi hitam */
+    padding-top: 30px; 
+    padding-bottom: 30px;
+   
+    
+}
+.custom-label-button {
+    /* ... properti lain (font-size, padding, etc.) ... */
+    
+    /* GANTI DUA PROPERTI INI */
+    background-color: #ffffff !important; /* Warna Latar Belakang Kustom (Biru Muda) */
+    border-color: #f7f4f4 !important;     /* Warna Garis Tepi Kustom (agar border sama dengan BG) */
+    
+    color: rgb(19, 19, 19) !important; /* Pastikan teks tetap kontras */
+    font-weight: var(--extrabold);
+}
+
+.label-satu, .label-dua, .label-tiga {
+    /* Warna Latar Belakang Kustom (Hijau) */
+    background-color:transparent !important; 
+    
+    /* Penting: Samakan warna border agar bentuknya solid */
+    border-color: #fcfffd !important;     
+    
+    /* Pastikan warna teks kontras */
+    color: white !important; 
+}
+
+
+.d-flex.justify-content-between{
+  width: 90%; 
+  margin: 20px auto; 
+  border: 1px solid #ffffff; 
+  padding: 10px;
+  border-radius: 90px;
+}
+
+
+/* MEDIA QUERY: Sesuaikan posisi untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .d-flex.justify-content-between {
+    /* Tambahkan style Anda di sini */
+      width: 450px; 
+  margin: 20px auto; 
+  border: 1px solid #ffffff; 
+  padding: 10px;
+  border-radius: 90px;
+}
+}
+
+/* ---------------------------------------------------------------- */
+
+
+/* Opsional: Ubah warna teks di dalam section ini menjadi putih jika ada teks lain */
+.project-section p, 
+.project-section h2,
+.project-section h3 {
+    color: white; 
+}
+/* Wadah yang akan mengaktifkan scroll */
+.mini-gallery-wrapper {
+    width: 100%;
+    overflow-x: scroll; /* Scroll horizontal diaktifkan di sini */
+    overflow-y: hidden;
+    white-space: nowrap; /* Mencegah gambar turun ke baris baru */
+    -webkit-overflow-scrolling: touch; /* Memperbaiki scroll di iOS */
+}
+
+/* Wadah dalam untuk menampung gambar-gambar */
+.mini-gallery-scroll {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Gambar-gambar mini (thumbnails) */
+.mini-thumb {
+    width: 100%; /* Setiap gambar mengambil lebar penuh wrapper */
+    height: auto;
+    flex-shrink: 0; /* Penting: Mencegah gambar menyusut */
+    margin-right: 5px; /* Spasi antar gambar */
+}
+/* Aturan ini menargetkan elemen gambar di dalam carousel yang ada di modal */
+#imageGalleryCarousel .carousel-item img {
+    /* Mengatur lebar maksimum agar gambar tidak keluar dari modal */
+    max-width: 100%; 
+    
+    /* Mengatur tinggi maksimum, idealnya 80% dari tinggi layar (viewport) */
+    max-height: 80vh; 
+    
+    /* Memastikan rasio aspek gambar tetap proporsional */
+    height: auto; 
+    
+    /* Menjadikan gambar berada di tengah dalam wadahnya */
+    margin: auto; 
+    
+    /* Menyesuaikan objek gambar dalam wadah, jika diperlukan */
+    object-fit: contain;
+    
+}
+
+/*pop up color*/
+/* Buat CSS ini untuk menimpanya */
+.modal-backdrop.show {
+    /* Meningkatkan opasitas menjadi 80% (0.8) atau 90% (0.9) */
+    opacity: 0.9 !important; 
+    
+    /* Gunakan !important untuk memastikan aturan ini mengalahkan default Bootstrap */
+}
+
+/*arna Latar Belakang*/
+.modal-content {
+    /* 1. Atur Warna Latar Belakang menjadi Hitam atau Abu-abu Gelap */
+    background-color: #212529; /* Warna hitam gelap/dark mode */
+    
+    /* 2. Ubah Warna Teks di dalamnya menjadi Putih agar terlihat */
+    color: #f8f9fa; /* Warna putih atau abu-abu sangat muda */
+    
+}
+
+/*Sesuaikan Warna Header (opsional) */
+.modal-header {
+    border-bottom: 1px solid #495057; /* Ubah warna garis batas menjadi gelap */
+}
+
+/*Sesuaikan Warna Tombol Tutup (X) */
+.modal-header .btn-close {
+    /* Tombol X (close) di Bootstrap 5 perlu CSS filter agar menjadi putih/terang */
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+
+
+/*slider*/
