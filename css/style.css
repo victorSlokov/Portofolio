@@ -39,16 +39,36 @@ body {
   color: var(--acsenColor);
   font-weight: var(--extrabold);
  }
+/*Menu awal.....................................................................*/
+/* ... */
 .content-image img {
-  max-width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
+ max-width: 100%;
+ height: auto;
+ mix-blend-mode: multiply;
 }
-.wadah-relative {
- padding: 0;
- top: 0;
 
-    transform: translateX(100px)
+/* PERBAIKAN DI SINI */
+.wadah-relative {
+padding: 0;
+top: 0;
+transform: none; /* Diperbaiki: Mengatur transform ke 'none' agar tidak terdorong 100px ke kanan */
+}
+
+/*.....................................................................*/
+
+/* ... bagian media query dan lainnya tetap sama ... */
+
+/* MEDIA QUERY: Sesuaikan posisi untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+.d-flex.justify-content-between {
+/* Tambahkan style Anda di sini */
+width: 95%; /* Ganti 450px dengan persentase agar responsif di layar kecil */
+      max-width: 450px;
+margin: 20px auto; 
+border: 1px solid #ffffff; 
+padding: 10px;
+border-radius: 90px;
+}
 }
 
 /*.....................................................................*/
