@@ -366,7 +366,7 @@ img[alt="netlify"] {
 @media (max-width: 768px) {
     .d-flex.justify-content-between {
     /* Tambahkan style Anda di sini */
-      width: 450px; 
+    ; 
   margin: 20px auto; 
   border: 1px solid #ffffff; 
   padding: 10px;
